@@ -1,0 +1,236 @@
+/* ============================= */
+/* BODY I FONT */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding-top:80px;
+  background:#fdf6f0;
+  color:#333;
+}
+
+/* ============================= */
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:#00695c;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  z-index: 9999;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+header .logo {
+  font-size:1.5em;
+  font-weight:600;
+}
+
+/* MENU */
+nav ul.menu {
+  list-style:none;
+  display:flex;
+  margin:0;
+  padding:0;
+  gap:20px;
+}
+
+nav ul.menu li {
+  position:relative;
+}
+
+nav ul.menu li a {
+  text-decoration:none;
+  color:white;
+  padding:8px 12px;
+  display:block;
+  border-radius:5px;
+}
+
+nav ul.menu li a:hover {
+  background:rgba(255,255,255,0.2);
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top:100%;
+  left:0;
+  background:#00796b;
+  list-style:none;
+  padding:0;
+  margin:0;
+  border-radius:5px;
+  min-width:160px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  z-index:10000;
+}
+
+.dropdown-menu li a {
+  padding:8px 12px;
+  color:white;
+  display:block;
+}
+
+.dropdown-menu li a:hover {
+  background:#004d40;
+}
+
+/* ============================= */
+/* CARD SEKCIJE */
+.card {
+  max-width:800px;
+  margin:20px auto;
+  padding:20px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+.card h2 {
+  margin-bottom:15px;
+  color:#00695c;
+}
+
+p {
+  text-align:center;
+  font-size:1.2em;
+  line-height:1.5;
+}
+
+/* ============================= */
+/* SLIDESHOW */
+.slideshow-container {
+  position:relative;
+  max-width:700px;
+  margin:20px auto;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.mySlides { display:none; }
+.mySlides img { width:100%; border-radius:15px; }
+
+/* Prev/Next dugmad */
+.prev, .next {
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  padding:12px;
+  color:white;
+  font-weight:bold;
+  font-size:20px;
+  background:rgba(0,0,0,0.3);
+  user-select:none;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+}
+
+.prev { left:10px; }
+.next { right:10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+/* ============================= */
+/* FADE-IN */
+.fade-in {
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav ul.menu {
+    flex-direction:column;
+    gap:0;
+    background:#00695c;
+    display:none;
+  }
+  nav ul.menu.show { display:flex; }
+  nav ul.menu li a { padding:10px; }
+}
+/* ============================= */
+/* RANDOM ČINJENICE */
+.card ul {
+  list-style: none; /* uklanja standardne bullet-e */
+  padding: 0;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+/* mala ikonica mačke kao bullet */
+.card ul li::before {
+  content: "🐾";
+  position: absolute;
+  left: 0;
+}
+
+/* ============================= */
+/* KONTAKT */
+.card p strong {
+  color: #00695c;
+}
+
+/* Kontakt linkovi mogu biti klikabilni */
+.card p a {
+  color: #00796b;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card p a:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* Dugme za random fact */
+#fact-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background:#00796b;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#fact-btn:hover {
+  background:#004d40;
+}
+
+/* Random fact tekst */
+#random-fact {
+  font-size:1.2em;
+  margin-bottom:10px;
+  text-align:center;
+}

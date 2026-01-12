@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat World</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🐱 Cat World</div>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Početna</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Vrste ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="maine-coon.html">Maine Coon</a></li>
+          <li><a href="siamese.html">Siamese</a></li>
+          <li><a href="persian.html">Persian</a></li>
+          <li><a href="ragdoll.html">Ragdoll</a></li>
+          <li><a href="bengal.html">Bengal</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Dobrodošlica -->
+  <section class="card fade-in">
+    <h2>Dobrodošli u Cat World!</h2>
+    <p>Ovo je sajt posvećen najlepšim i najpoznatijim vrstama mačaka. 🐱</p>
+    <p>Izaberi vrstu iz padajućeg menija da vidiš slike i informacije o toj vrsti.</p>
+  </section>
+
+  <!-- Slideshow sa slikama glavnih vrsta -->
+  <section class="card fade-in">
+    <h2>Galerija glavnih vrsta</h2>
+    <div class="slideshow-container">
+      <div class="mySlides fade"><img src="images/maine1.jpg" alt="Maine Coon"></div>
+      <div class="mySlides fade"><img src="images/siamese1.jpg" alt="Siamese"></div>
+      <div class="mySlides fade"><img src="images/persian2.jpg" alt="Persian"></div>
+      <div class="mySlides fade"><img src="images/ragdoll1.jpg" alt="Ragdoll"></div>
+      <div class="mySlides fade"><img src="images/bengal1.jpg" alt="Bengal"></div>
+
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+  </section>
+
+  <!-- Random Fact dugme -->
+  <section class="card fade-in">
+    <h2>Zanimljive činjenice o mačkama</h2>
+    <p id="random-fact">Klikni dugme ispod da vidiš činjenicu!</p>
+    <button id="fact-btn">Nova činjenica 🐾</button>
+  </section>
+
+  <!-- Tekst o mačkama i Egiptu -->
+  <section class="card fade-in">
+    <h2>Mačke u istoriji Egipta</h2>
+    <p>Mačke su u drevnom Egiptu smatrane svetim životinjama i povezivane sa boginjom Bastet. 
+       One su čuvale domove od glodara i bile simbol zaštite i plodnosti.</p>
+    <p>Egipćani su ih obožavali i često prikazivali u umetnosti, a ubijanje mačke je bilo strogo kažnjavano.</p>
+    <p>Ovaj odnos ljudi i mačaka oblikovao je kulturu poštovanja prema ovim elegantnim životinjama još pre nekoliko hiljada godina.</p>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="card fade-in">
+    <h2>Kontakt</h2>
+    <p>Ako imaš pitanja ili želiš da podeliš svoje priče o mačkama, piši nam na:</p>
+    <p><strong>Email:</strong> kontakt@catworld.rs</p>
+    <p><strong>Instagram:</strong> @catworld</p>
+    <p><strong>Facebook:</strong> fb.com/catworld</p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+<script>
+  // =====================
+  // RANDOM FACT BUTTON
+  // =====================
+  const facts = [
+    "Mačke mogu da prepoznaju glas svog vlasnika, ali često ignorišu naredbe.",
+    "Prosečna mačka spava 12-16 sati dnevno.",
+    "Mačke imaju osetljive brkove koji im pomažu da procene prostor oko sebe.",
+    "Najstarija mačka živela je preko 38 godina.",
+    "Mačke mogu praviti preko 100 različitih zvukova, dok psi samo oko 10.",
+    "Mačke su u drevnom Egiptu smatrane svetim životinjama.",
+    "Mačke mogu trčati i do 48 km/h kada su u lovu ili igri.",
+    "Mačke koriste rep za ravnotežu i komunikaciju raspoloženja."
+  ];
+
+  const factBtn = document.getElementById('fact-btn');
+  const factText = document.getElementById('random-fact');
+
+  factBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    factText.textContent = facts[randomIndex];
+  });
+</script>
+
+</body>
+</html>
